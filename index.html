@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Définit l'encodage des caractères -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Assure que la page est responsive -->
+    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
+    <script src="progressbar.min.js"></script> <!-- Importe la bibliothèque de la barre de progression -->
+    <title>TaskPom</title> <!-- Titre de la page -->
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="container-nav">
+                <h1 class="title">TaskPom</h1> <!-- Titre du site -->
+                <button class="log" role="button">Login</button> <!-- Bouton de connexion -->
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container-pomo">
+            <div class="select">
+                <button id="focus-mode" role="button"><span class="text">Focus</span></button>
+                <!-- Bouton pour le mode focus -->
+                <button id="break-mode" role="button"><span class="text">Break</span></button>
+                <!-- Bouton pour le mode pause -->
+            </div>
+
+            <div class="pomo">
+                <div id="pomodoro-clock">
+                    <div id="pomodoro-timer">
+                    </div>
+                    <div id="pomodoro-clock-actions">
+                        <button id="pomodoro-start" role="button"><span class="text">Start</span></button>
+                        <!-- Bouton pour démarrer le timer -->
+                        <button id="pomodoro-pause" role="button"><span class="text">Pause</span></button>
+                        <!-- Bouton pour mettre en pause le timer -->
+                        <button id="pomodoro-stop" role="button"><span class="text">Stop</span></button>
+                        <!-- Bouton pour arrêter le timer -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-todo">
+            <h2>To-Do List</h2>
+            <input type="text" id="new-task" placeholder="Add a new task">
+            <button id="add-task" role="button">Add Task</button>
+            <ul id="task-list"></ul>
+        </div>
+    </main>
+
+    <script src="script.js"></script> <!-- Importe le fichier JavaScript -->
+</body>
+
+</html>

@@ -1,0 +1,602 @@
+@font-face {
+    font-family: all;
+    /* Nom de la police pour le texte général */
+    src: url(assets/font/Poppins-Regular.ttf);
+    /* Chemin vers le fichier de police */
+}
+
+@font-face {
+    font-family: title;
+    /* Nom de la police pour les titres */
+    src: url(assets/font/Poppins-Bold.ttf);
+    /* Chemin vers le fichier de police */
+}
+
+h1 {
+    font-family: title;
+    /* Utilise la police "title" pour les h1 */
+}
+
+h2,
+p,
+button {
+    font-family: all;
+    /* Utilise la police "all" pour les h2, p et button */
+}
+
+body {
+    margin: 0;
+    /* Supprime les marges par défaut */
+    padding: 0;
+    /* Supprime les espacements internes par défaut */
+    height: 100vh;
+    /* Définit la hauteur à 100% de la hauteur de la fenêtre */
+    background-color: rgb(5, 6, 45);
+    /* Définit la couleur de fond à une nuance de bleu foncé */
+}
+
+.container-nav {
+    display: flex;
+    /* Utilise Flexbox pour la disposition */
+    align-items: center;
+    /* Centre verticalement les éléments */
+    justify-content: space-between;
+    /* Espacement égal entre les éléments */
+}
+
+.title {
+    color: aliceblue;
+    /* Définit la couleur du texte à une nuance de bleu clair */
+    margin-left: 150px;
+    /* Ajoute une marge à gauche de 150px */
+}
+
+.log {
+    margin-right: 50px;
+    /* Ajoute une marge à droite de 50px */
+}
+
+.container-pomo {
+    display: flex;
+    /* Utilise Flexbox pour la disposition */
+    align-items: center;
+    /* Centre verticalement les éléments */
+    flex-direction: column;
+    /* Aligne les éléments en colonne */
+}
+
+.select {
+    display: flex;
+    /* Utilise Flexbox pour la disposition */
+    align-items: center;
+    /* Centre verticalement les éléments */
+    justify-content: center;
+    /* Centre horizontalement les éléments */
+    width: 50%;
+    /* Définit la largeur à 50% */
+}
+
+.pomo {
+    display: flex;
+    /* Utilise Flexbox pour la disposition */
+}
+
+#focus-mode {
+    align-items: center;
+    /* Centre verticalement les éléments */
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #1896c4);
+    /* Dégradé d'arrière-plan */
+    border: 0;
+    /* Supprime la bordure */
+    border-radius: 8px;
+    /* Arrondit les coins avec un rayon de 8px */
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    /* Ajoute une ombre portée */
+    box-sizing: border-box;
+    /* Utilise le modèle de boîte de bordure */
+    color: #FFFFFF;
+    /* Définit la couleur du texte à blanc */
+    display: flex;
+    /* Utilise Flexbox pour la disposition */
+    font-family: Phantomsans, sans-serif;
+    /* Utilise la police Phantomsans */
+    font-size: 20px;
+    /* Définit la taille de la police à 20px */
+    justify-content: center;
+    /* Centre horizontalement les éléments */
+    line-height: 1em;
+    /* Définit la hauteur de ligne à 1em */
+    max-width: 100%;
+    /* Définit la largeur maximale à 100% */
+    min-width: 140px;
+    /* Définit la largeur minimale à 140px */
+    padding: 3px;
+    /* Ajoute un espace de remplissage de 3px */
+    margin-bottom: 20px;
+    text-decoration: none;
+    /* Supprime la décoration de texte */
+    user-select: none;
+    /* Empêche la sélection de texte */
+    -webkit-user-select: none;
+    /* Empêche la sélection de texte pour WebKit */
+    touch-action: manipulation;
+    /* Définit le comportement de manipulation tactile */
+    white-space: nowrap;
+    /* Empêche le retour à la ligne */
+    cursor: pointer;
+    /* Définit le curseur à pointer */
+}
+
+#focus-mode:active,
+#focus-mode:hover {
+    outline: 0;
+    /* Supprime les contours lors du clic ou du survol */
+}
+
+#focus-mode span {
+    background-color: rgb(5, 6, 45);
+    /* Définit la couleur de fond à une nuance de bleu foncé */
+    padding: 16px 24px;
+    /* Ajoute un espace de remplissage de 16px verticalement et 24px horizontalement */
+    border-radius: 6px;
+    /* Arrondit les coins avec un rayon de 6px */
+    width: 100%;
+    /* Définit la largeur à 100% */
+    height: 100%;
+    /* Définit la hauteur à 100% */
+    transition: 300ms;
+    /* Ajoute une transition de 300ms */
+}
+
+#focus-mode:hover span {
+    background: none;
+    /* Supprime le fond au survol */
+}
+
+@media (min-width: 768px) {
+    #focus-mode {
+        font-size: 24px;
+        /* Définit la taille de la police à 24px pour les écrans plus larges */
+        min-width: 196px;
+        /* Définit la largeur minimale à 196px pour les écrans plus larges */
+    }
+}
+
+#break-mode {
+    align-items: center;
+    /* Centre verticalement les éléments */
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #1896c4);
+    /* Dégradé d'arrière-plan */
+    border: 0;
+    /* Supprime la bordure */
+    border-radius: 8px;
+    /* Arrondit les coins avec un rayon de 8px */
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    /* Ajoute une ombre portée */
+    box-sizing: border-box;
+    /* Utilise le modèle de boîte de bordure */
+    color: #FFFFFF;
+    /* Définit la couleur du texte à blanc */
+    display: flex;
+    /* Utilise Flexbox pour la disposition */
+    font-family: Phantomsans, sans-serif;
+    /* Utilise la police Phantomsans */
+    font-size: 20px;
+    /* Définit la taille de la police à 20px */
+    justify-content: center;
+    /* Centre horizontalement les éléments */
+    line-height: 1em;
+    /* Définit la hauteur de ligne à 1em */
+    max-width: 100%;
+    /* Définit la largeur maximale à 100% */
+    min-width: 140px;
+    /* Définit la largeur minimale à 140px */
+    padding: 3px;
+    /* Ajoute un espace de remplissage de 3px */
+    margin-bottom: 20px;
+    text-decoration: none;
+    /* Supprime la décoration de texte */
+    user-select: none;
+    /* Empêche la sélection de texte */
+    -webkit-user-select: none;
+    /* Empêche la sélection de texte pour WebKit */
+    touch-action: manipulation;
+    /* Définit le comportement de manipulation tactile */
+    white-space: nowrap;
+    /* Empêche le retour à la ligne */
+    cursor: pointer;
+    /* Définit le curseur à pointer */
+}
+
+#break-mode:active,
+#break-mode:hover {
+    outline: 0;
+    /* Supprime les contours lors du clic ou du survol */
+}
+
+#break-mode span {
+    background-color: rgb(5, 6, 45);
+    /* Définit la couleur de fond à une nuance de bleu foncé */
+    padding: 16px 24px;
+    /* Ajoute un espace de remplissage de 16px verticalement et 24px horizontalement */
+    border-radius: 6px;
+    /* Arrondit les coins avec un rayon de 6px */
+    width: 100%;
+    /* Définit la largeur à 100% */
+    height: 100%;
+    /* Définit la hauteur à 100% */
+    transition: 300ms;
+    /* Ajoute une transition de 300ms */
+}
+
+#break-mode:hover span {
+    background: none;
+    /* Supprime le fond au survol */
+}
+
+@media (min-width: 768px) {
+    #break-mode {
+        font-size: 24px;
+        /* Définit la taille de la police à 24px pour les écrans plus larges */
+        min-width: 196px;
+        /* Définit la largeur minimale à 196px pour les écrans plus larges */
+    }
+}
+
+#pomodoro-clock-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+#pomodoro-start,
+#pomodoro-pause,
+#pomodoro-stop {
+    align-items: center;
+    /* Centre verticalement les éléments */
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #1896c4);
+    /* Dégradé d'arrière-plan */
+    border: 0;
+    /* Supprime la bordure */
+    border-radius: 8px;
+    /* Arrondit les coins avec un rayon de 8px */
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    /* Ajoute une ombre portée */
+    box-sizing: border-box;
+    /* Utilise le modèle de boîte de bordure */
+    color: #FFFFFF;
+    /* Définit la couleur du texte à blanc */
+    display: flex;
+    /* Utilise Flexbox pour la disposition */
+    font-family: Phantomsans, sans-serif;
+    /* Utilise la police Phantomsans */
+    font-size: 20px;
+    /* Définit la taille de la police à 20px */
+    justify-content: center;
+    /* Centre horizontalement les éléments */
+    line-height: 1em;
+    /* Définit la hauteur de ligne à 1em */
+    max-width: 100%;
+    /* Définit la largeur maximale à 100% */
+    min-width: 100px;
+    /* Définit la largeur minimale à 140px */
+    padding: 3px;
+    /* Ajoute un espace de remplissage de 3px */
+    margin: 20px;
+    text-decoration: none;
+    /* Supprime la décoration de texte */
+    user-select: none;
+    /* Empêche la sélection de texte */
+    -webkit-user-select: none;
+    /* Empêche la sélection de texte pour WebKit */
+    touch-action: manipulation;
+    /* Définit le comportement de manipulation tactile */
+    white-space: nowrap;
+    /* Empêche le retour à la ligne */
+    cursor: pointer;
+    /* Définit le curseur à pointer */
+}
+
+
+#pomodoro-start:active,
+#pomodoro-start:hover {
+    outline: 0;
+    /* Supprime les contours lors du clic ou du survol */
+}
+
+
+#pomodoro-pause:active,
+#pomodoro-pause:hover {
+    outline: 0;
+    /* Supprime les contours lors du clic ou du survol */
+}
+
+
+#pomodoro-stop:active,
+#pomodoro-stop:hover {
+    outline: 0;
+    /* Supprime les contours lors du clic ou du survol */
+}
+
+#pomodoro-start span {
+    background-color: rgb(5, 6, 45);
+    /* Définit la couleur de fond à une nuance de bleu foncé */
+    padding: 16px 24px;
+    /* Ajoute un espace de remplissage de 16px verticalement et 24px horizontalement */
+    border-radius: 6px;
+    /* Arrondit les coins avec un rayon de 6px */
+    width: 100%;
+    /* Définit la largeur à 100% */
+    height: 100%;
+    /* Définit la hauteur à 100% */
+    transition: 300ms;
+    /* Ajoute une transition de 300ms */
+}
+
+#pomodoro-start:hover span {
+    background: none;
+    /* Supprime le fond au survol */
+}
+
+#pomodoro-pause span {
+    background-color: rgb(5, 6, 45);
+    /* Définit la couleur de fond à une nuance de bleu foncé */
+    padding: 16px 24px;
+    /* Ajoute un espace de remplissage de 16px verticalement et 24px horizontalement */
+    border-radius: 6px;
+    /* Arrondit les coins avec un rayon de 6px */
+    width: 100%;
+    /* Définit la largeur à 100% */
+    height: 100%;
+    /* Définit la hauteur à 100% */
+    transition: 300ms;
+    /* Ajoute une transition de 300ms */
+}
+
+#pomodoro-pause:hover span {
+    background: none;
+    /* Supprime le fond au survol */
+}
+
+#pomodoro-stop span {
+    background-color: rgb(5, 6, 45);
+    /* Définit la couleur de fond à une nuance de bleu foncé */
+    padding: 16px 24px;
+    /* Ajoute un espace de remplissage de 16px verticalement et 24px horizontalement */
+    border-radius: 6px;
+    /* Arrondit les coins avec un rayon de 6px */
+    width: 100%;
+    /* Définit la largeur à 100% */
+    height: 100%;
+    /* Définit la hauteur à 100% */
+    transition: 300ms;
+    /* Ajoute une transition de 300ms */
+}
+
+#pomodoro-stop:hover span {
+    background: none;
+    /* Supprime le fond au survol */
+}
+
+.container-todo {
+    width: 25%;
+    height: auto;
+    margin: 20px auto;
+    background-color: rgb(5, 6, 45);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container-todo h2 {
+    font-family: 'Poppins-Bold', sans-serif;
+    color: #fafafa;
+    text-align: center;
+}
+
+.container-todo input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.container-todo button {
+    background-color: #5B42F3;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container-todo button:hover {
+    background-color: #107bbd;
+}
+
+/* Container for task item and buttons */
+.task-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Space between tasks */
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for task item */
+.task-item {
+    flex-grow: 1; /* Take up remaining space */
+    text-align: left;
+}
+
+/* Completed task style */
+.task-item.completed span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Style pour les boutons */
+.complete-btn,
+.delete-btn {
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 50%; /* Rend les boutons ronds */
+    cursor: pointer;
+    padding: 5px;
+}
+
+.complete-btn {
+    width: 20px;
+    height: 20px;
+}
+
+.complete-btn.completed {
+    background-color: #1896c4; /* Couleur de remplissage lorsqu'il est complet */
+}
+
+.delete-btn {
+    background-color: #c0392b;
+    color: #fff;
+    padding: 5px 8px; /* Ajuste le padding */
+}
+
+.delete-btn:hover {
+    background-color: #e74c3c;
+}
+
+/* Container pour les éléments de tâche et les boutons */
+.task-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Espacement entre les tâches */
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour l'élément de tâche */
+.task-item {
+    flex-grow: 1; /* Prendre tout l'espace disponible */
+    text-align: left;
+    margin-right: 10px; /* Ajoute un espace entre l'élément de tâche et les boutons */
+}
+
+/* Style pour les boutons */
+.complete-btn,
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.complete-btn {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #1896c4; /* Couleur de la bordure */
+}
+
+.complete-btn.completed {
+    background-color: #1896c4; /* Couleur de remplissage lorsqu'il est complet */
+}
+
+.delete-btn {
+    background-color: #c0392b;
+    color: #fff;
+    padding: 5px 8px; /* Ajuste le padding */
+    border-radius: 4px;
+}
+
+.delete-btn:hover {
+    background-color: #e74c3c;
+}
+
+/* Icones des boutons */
+.complete-btn::after {
+    content: "✔"; /* Symbole de coche */
+    font-size: 20px;
+    color: #fff; /* Couleur de l'icône */
+}
+
+.delete-btn::after {
+    content: "✖"; /* Symbole de croix */
+    font-size: 20px;
+    color: #fff; /* Couleur de l'icône */
+}
+
+/* Positionnement des icônes */
+.complete-btn::after,
+.delete-btn::after {
+    display: block;
+    text-align: center;
+    line-height: 30px;
+}
+
+
+
+.log {
+    appearance: none;
+    background-color: #ffffff;
+    color: #107bbd;
+    border: 1px solid  #ffffff;
+    border-radius: 6px;
+    box-shadow: #5B42F3 0 1px 0, #5B42F3 0 1px 0 inset;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    font-family: all;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    padding: 6px 16px;
+    position: relative;
+    transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    word-wrap: break-word;
+}
+
+.log:hover {
+    background-color: #107bbd;
+    color: #ffffff;
+    text-decoration: none;
+    transition-duration: 0.1s;
+}
+
+.log:disabled {
+    background-color: #ffffff;
+    border-color: rgba(27, 31, 35, 0.15);
+    color: #959DA5;
+    cursor: default;
+}
+
+.log:active {
+    background-color: #ffffff;
+    box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+    transition: none 0s;
+}
+
+.log:focus {
+    outline: 1px transparent;
+}
+
+.log:before {
+    display: none;
+}
+
+.log:-webkit-details-marker {
+    display: none;
+}
